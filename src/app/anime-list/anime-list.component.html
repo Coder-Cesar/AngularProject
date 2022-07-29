@@ -1,0 +1,42 @@
+<div class="col-12">
+  <h1 class="text-center">
+    <i class="fa-solid fa-book-open"></i> {{ titulo }}
+  </h1>
+
+  <table class="table">
+    <thead class="chro">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre del anime</th>
+        <th scope="col">Genero</th>
+        <th scope="col">Número de personajes</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let anime of animes">
+        <!-- // inicia el for-->
+        <th scope="row">{{ anime.id }}</th>
+        <td>{{ anime.nombre | uppercase }}</td>
+        <!--usando pipe uppercase-->
+        <td>{{ anime.genero }}</td>
+        <td class="ps-5">{{ anime.characters.length }}</td>
+        <!-- length da el numero de elementos que tiene un array-->
+        <td>
+          <a routerLink="/anime/{{ anime.id }}" class="btn btn-primary"
+            ><i class="fa-solid fa-circle-right"></i
+          ></a>
+        </td>
+      </tr>
+      <!--// fin de tr y ciclo for-->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td><b> Total de animes mostrados:</b></td>
+        <td colspan="4" class="text-danger">
+          <i class="fa-solid fa-users"></i> {{ animes.length }}
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

@@ -1,0 +1,18 @@
+.btn{
+    border: none;
+}
+
+.description{
+    border: none;
+}
+
+.btni{
+    margin: 20px 0 -12px 0 ;
+}
+
+.btn i:hover{
+    transition: all .4 ease;
+    font-size: 17px;
+    color: darkblue;
+    
+}

@@ -1,0 +1,13 @@
+.navbar{
+    background-color: rgb(12, 77, 77);
+    font-weight: bolder;
+    
+}
+.navbar a{
+    margin-right: 100px !important;
+
+}
+li{
+    margin: 0 100px;
+ 
+}

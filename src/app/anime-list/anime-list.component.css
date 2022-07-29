@@ -1,0 +1,12 @@
+.chro{
+    background-color: rgb(32, 198, 198);
+}
+
+.btn{
+    background-color: rgb(32, 198, 198);
+    border: none;
+}
+
+.btn:hover{
+    background-color:rgb(32, 198, 240) ;
+}

@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <!-- Team Member 1 -->
+    <div class="col-4">
+      <div class="card border-0 shadow">
+        <img src="{{ anime.foto }}" class="card-img-top" />
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0 fw-bold">{{ anime.nombre }}</h5>
+          <div class="card-text text-black-50">{{ anime.genero }}</div>
+          <p class="btni">
+            <a
+              class="btn"
+              data-bs-toggle="collapse"
+              href="#multiCollapseExample1"
+              role="button"
+              aria-expanded="false"
+              aria-controls="multiCollapseExample1"
+              ><i class="fa-solid fa-angles-down"></i
+            ></a>
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body description">
+                  {{ anime.description }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fin col-4 -->
+    <div class="col-8">
+      <h2 class="text-center fw-bolder">Personajes</h2>
+
+      <div class="row">
+        <div class="col-4" *ngFor="let character of anime.characters">
+          <app-character [character]="character"></app-character>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
